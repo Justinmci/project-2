@@ -1,0 +1,29 @@
+{
+  "name": "project-two",
+  "description": "An application for users to share their stories",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Justinmci/project-two.git"
+  },
+  "author": "Conor, Justin, Constance, Ian, Arcan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Justinmci/project-two/issues"
+  },
+  "homepage": "https://github.com/Justinmci/project-two#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "passport": "^0.5.2",
+    "sequelize": "^6.16.2"
+  }
+}
