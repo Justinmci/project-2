@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post, Comment } = require("../../models");
+const { User, Post, Comment, Likes } = require("../../models");
 
 // Get all users
 router.get("/", (req, res) => {
@@ -58,4 +58,6 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
 
 });
+
+module.exports = router;
 
