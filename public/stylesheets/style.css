@@ -1,0 +1,344 @@
+/* Remove Browser Default Styling */
+/* the * acts as a select all*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
+
+/* CSS Variables */
+:root {
+  --white: #e9f0fd;
+  --cream: #f0dfc5;
+  --warm-grey: #867365;
+  --blue-green: #437d92;
+  --blue-green-rovr: #069da2;
+  --bright-red: #ba0001;
+  --cherry-red: #7d0001;
+  --subtle-red: #a4262c;
+  --orange-red: #b33f32;
+  --deep-orange-red: #862f26;
+  --light-blue-green: #4f869a;
+  --bright-blue-green: #038387;
+  --mid-green: #1e9b53;
+  --purple: #26232c;
+  --bright-green: #09212d;
+  --blue: #0078d4;
+  --blue-rovr: #1f9bf9;
+  --brown: #201014;
+  --lime: #deeeae;
+  --sage: #909b7e;
+}
+
+/* Index Page Background*/
+.background {
+  flex-wrap: wrap;
+  column-count: 1;
+  column-gap: 0;
+  height: 100%;
+  margin: auto;
+  z-index: 1;
+}
+
+/* Add a black background color to the top navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bright-red);
+  overflow: hidden;
+  height: 28vh;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  /* margin-top: 30vh; */
+  left: 50%;
+  width: 100%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Style the links inside the navigation bar */
+nav a {
+  display: absolute;
+  /* flex: 0 1 30vw; */
+  list-style: none;
+  color: #f2f2f2;
+  text-align: center;
+  /* padding: 0px;
+  margin: 0px; */
+  text-decoration: none;
+  font-size: clamp(1rem, 6vw, 2.5rem);
+  z-index: 1;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+nav a.active {
+  background-color: #04aa6d;
+  color: white;
+  text-decoration: none;
+}
+
+nav i {
+  color: white;
+  size: 50vw;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  position: absolute;
+  flex: 0 1 10vw;
+  margin: 0;
+  margin-top: 6.5vh;
+  left: 50%;
+  /* width: 75%; */
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+/* Footer Image
+.campfire {
+  display: flex;
+  max-width: 50%;
+  left: 90%;
+  height: auto;
+  /* margin: 0; */
+transform: scale(0.6) z-index 4;
+/* } 
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Index Page Column 1 Background*/
+.column1 {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-blend-mode: hard-light;
+  background-color: var(--brown);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Index Page Logo */
+.homepage-logo {
+  text-align: center;
+  font-family: "Rowdies", cursive;
+  font-size: clamp(5rem, 12vw, 7.5rem);
+  margin: 0;
+  position: absolute;
+  margin-top: 25vh;
+  left: 50%;
+  width: 100%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.homepage-logo a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.homepage-logo a:hover {
+  color: var(--warm-grey);
+}
+
+/* Index Page Tagline */
+.tagline {
+  text-align: center;
+  font-family: "La Belle Aurore", cursive;
+  font-weight: bold;
+  line-height: 1.1em;
+  font-size: clamp(1rem, 6vw, 2.5rem);
+  margin: 0;
+  position: absolute;
+  margin-top: 38vh;
+  color: var(--bright-red);
+  left: 50%;
+  width: 100%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+/* Footer */
+.index-h5 {
+  position: absolute;
+  font-family: "Bebas Neue", cursive;
+  font-size: clamp(0.8rem, 4vw, 1rem);
+  font-weight: normal;
+  color: var(--warm-grey);
+  margin-top: 0vh;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  bottom: 0px;
+  z-index: 5;
+}
+
+/* Index Page Stock Button */
+.explore-button {
+  outline: none !important;
+  height: 50px;
+  width: 225px;
+  margin-top: 48vh;
+  font-family: "Zilla Slab", serif;
+  font-size: clamp(0.75rem, 4vw, 1.5rem);
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.1em;
+  color: var(--brown);
+  border: 0;
+  border-radius: 100px;
+  background-color: var(--bright-blue-green);
+  padding: 12px 15px 10px 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: absolute;
+  left: 40%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.explore-button:hover {
+  background-color: var(--blue-green-rovr);
+  color: var(--brown);
+  border: 0;
+}
+
+/* Index Page Crypto Button */
+.share-button {
+  outline: none !important;
+  height: 50px;
+  width: 225px;
+  margin-top: 48vh;
+  align-content: center;
+  font-family: "Zilla Slab", serif;
+  font-size: clamp(0.75rem, 4vw, 1.5rem);
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.1em;
+  color: var(--brown);
+  border: 0;
+  border-radius: 100px;
+  background-color: var(--blue);
+  padding: 12px 15px 10px 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: relative;
+  left: 60%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.share-button:hover {
+  background-color: var(--blue-rovr);
+  color: var(--brown);
+  border: 0;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  text-align: left;
+  background: none;
+  z-index: 5;
+}
+
+/* Mobile Display Only */
+.mobile {
+  display: none;
+}
+
+/* Mobile Devices 420px and Under */
+@media (max-width: 912px) {
+  .column {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Mobile Devices 540px and Under */
+  @media (max-width: 540px) {
+    .intro {
+      display: none;
+    }
+
+    .homepage-logo {
+      width: 100%;
+    }
+
+    .tagline {
+      font-size: 30px;
+      padding-top: 10px;
+    }
+
+    .explore-button {
+      width: 120px;
+      font-size: 21px;
+      align-content: center;
+    }
+
+    .share-button {
+      width: 120px;
+      font-size: 21px;
+      align-content: center;
+    }
+
+    .footer {
+      margin-left: -10px;
+      margin-bottom: -10px;
+    }
+
+    /* Mobile Devices 280px and Under */
+    @media (max-width: 280px) {
+      .mobile {
+        display: content;
+      }
+
+      .tagline {
+        font-size: 24px;
+        padding-top: 35px;
+      }
+    }
+  }
+}
