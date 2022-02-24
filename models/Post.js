@@ -47,7 +47,14 @@ Post.init({
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: [1]
+            len: [1,50]
+        }
+    },
+    summary: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [1,255]
         }
     },
     content: {
