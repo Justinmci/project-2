@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const { where } = require("sequelize/types");
 const { User, Post, Comment, Likes } = require("../../models");
 
 // Get all users
@@ -71,30 +70,25 @@ router.post("/", (req, res) => {
 });
 
 router.post('/login', (req, res) => {
+  // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
-    /* I've tried to make it so the user can enter their 
-    email or username I think this should work but we 
-    don't have to keep it if it's to much trouble */
-    where: { $or: [
-      {
-        email: req.body.email
-      },
-      {
-        username: req.body.username
-      }
-    ]},
-  })
-  .then(dbUserData => {
+    where: {
+      email: req.body.email
+    }
+  }).then(dbUserData => {
     if (!dbUserData) {
       res.status(400).json({ message: 'No user with that email address!' });
       return;
     }
+
     const validPassword = dbUserData.checkPassword(req.body.password);
+
     if (!validPassword) {
       res.status(400).json({ message: 'Incorrect password!' });
       return;
     }
-    res.json({ user: dbUserData, message: 'You are now logged in' });
+
+    res.json({ user: dbUserData, message: 'You are now logged in!' });
   });
 });
 
