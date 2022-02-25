@@ -107,6 +107,14 @@ nav i {
   z-index: 4;
 }
 
+/* .logo:hover {
+  src: url(public/images/cabin-rollover.svg) no-repeat;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+} */
+
 /* Footer Image
 .campfire {
   display: flex;
