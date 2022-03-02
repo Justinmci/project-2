@@ -25,6 +25,7 @@ Write and store your own short stories by making an account with us! Read the la
 * [Conner](https://github.com/cnb10100)
 * [Constance](https://github.com/SnugglesMcGee)
 * [Ian](https://github.com/wiffin)
+* [Justin](https://github.com/Justinmci) 
 
 If you're wanting to contribute please see below!
 
