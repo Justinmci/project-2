@@ -2,7 +2,7 @@
 
 ## Description
 
-A short story sharing website where you can read others and write your own!
+A short story sharing website for Canadians where you can read the stories and poems of others and write your own!
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ URL GOES HERE
 
 ## Usage
 
-Write and store your own short stories by making an account with us! Read the latest stories on the explore page aswell.
+Write and store your own short stories by making an account with us! Read the latest stories on the explore page as well.
 
 ## Contributing
 
