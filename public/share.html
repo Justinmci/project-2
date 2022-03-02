@@ -1,86 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CABIN</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka+One&family=La+Belle+Aurore&family=Poller+One&family=Roboto+Slab:wght@300;400;700;900&family=Rowdies&family=Satisfy&family=Zilla+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../public/stylesheets/bootstrap.min.css">
 
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <title>Write - Create new story</title>
 
-    <link rel="shortcut icon" href="./images/Favicon.ico" />
-
-    <title>CABIN - the gathering place for Canadian storytellers</title>
-
-
-    <!-- Font Awesome (icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
-
+  </head>
   <body>
-    <!-- Background -->
-    <background>
-      <div style="background-image: url('./public/images/aurora-arctic.jpg')">
-        
-        <!-- Logo and Tagline -->
-        <h1 class="homepage-logo"><a href="index.html">CABIN</a></h1>
-        <h2 class="tagline">the gathering place for Canadian storytellers</h2>
-
-      <!-- Navigation -->
-        <nav class="topnav" id="myTopnav"></nav>>
-          <a href="#login" class="login">Log in</a>
-          <a href="#signup"class="signup">Sign up</a>
-          <a href="#subscribe"class="subscribe">Subscribe</a>
-          <a href="#" class="logo"><img
-            src="./images/cabin.svg"
-            alt="Cabin menu logo"
-            height="100"
-            width="150" /></a>
-          <a href="#search">Search</a>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </nav>
-
-        <!-- Buttons -->
-        <div
-          class="column1"
-        >
-          <button
-            class="explore-button"
-            onclick="window.location.href='explore.html';"
-          >
-            EXPLORE
-          </button>
-
-          <button
-            class="share-button"
-            onclick="window.location.href='share.html';"
-          >
-            SHARE
-          </button>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <h1><a href="index.html" class="navbar-brand"></a></h1>
+        <form class="form-inline">
+          <input type="text" class="form-control mr-3 mb-2 mb-sm-0" placeholder="Search">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+      </div>
+    </nav>
+    <div class="container my-3">
+      <nav class="breadcrumb">
+        <a href="index.html" class="breadcrumb-item">Home</a>
+        <a href="overview-forum-category.html" class="breadcrumb-item">Story categories</a>
+        <a href="overview-topics.html" class="breadcrumb-item">Category</a>
+        <span class="breadcrumb-item active">Create new story</span>
+      </nav>
+      <div class="row">
+        <div class="col-12">
+          <h2 class="h4 text-white bg-info mb-3 p-4 rounded">Create new story</h2>
+          <form class="mb-3">
+            <div class="form-group">
+              <label for="topic">Title:</label>
+              <input type="text" class="form-control" id="topic" placeholder="Give your story a title." required>
+            </div>
+            <div class="form-group">
+              <label for="comment">Story:</label>
+              <textarea class="form-control" id="comment" rows="10" placeholder="Write your story here." required></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="checkbox" value="notification">
+              <label class="form-check-label" for="checkbox">Notify me upon replies.</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Post story</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+          </form>
         </div>
+      </div>
+    </div>
+    <footer class="small bg-dark text-white">
+      <div class="container py-4">
+        <ul class="list-inline mb-0 text-center">
+          <li class="list-inline-item">&copy; 2022 Cabin</li>
+        </ul>
+      </div>
+    </footer>
 
-    </background>
-
-    <!-- Footer -->
-    <footer class="footer">
-
-          <!-- Footer -->
-      <!-- <div class="campfire"><img src="public/images/campfire.svg" alt="Cabin menu logo" -->
-        <!-- height="700"
-        width="700"/> -->
-      <h5 class="index-h5">&copy; 2022 Cabin</h5>
-        </footer>
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
