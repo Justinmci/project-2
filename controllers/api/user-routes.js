@@ -35,11 +35,17 @@ router.get("/:id", (req, res) => {
         include: {
           model: Post,
           attributes: ["title"],
-        },
+        }
       },
-    ],
+      {
+        model: Post,
+        attributes: ['title'],
+        through: Likes,
+        as: 'liked_posts'
+      }
+    ]
   })
-    .then((dbUserData) => {
+    .then(dbUserData => {
       if (!dbUserData) {
         res.status(404).json({
           message: "No user found with this id",
@@ -124,7 +130,7 @@ router.put('/:id', (req, res) => {
     }
   })
   .then(dbUserData => {
-    if(!dbUserData[0]) {
+    if(!dbUserData) {
       res.status(404).json({ message: 'No user found with this id' });
       return;
     }
