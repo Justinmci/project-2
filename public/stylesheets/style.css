@@ -111,7 +111,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: var(--warm-grey);
+  background-color: var(--lime);
   font-family: "Zilla Slab", serif;
   font-size: clamp(0.75rem, 4vw, 1.5rem);
   font-weight: bold;
@@ -323,7 +323,7 @@ nav i {
   margin: 0;
   position: absolute;
   margin-top: 37vh;
-  color: var(--warm-grey);
+  color: var(--lime);
   left: 50%;
   width: 100%;
   -ms-transform: translate(-50%, -50%);
