@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CABIN</title>
+    <title>CABIN - the gathering place for Canadian storytellers</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,17 +20,19 @@
 
     <link rel="shortcut icon" href="./images/Favicon.ico" />
 
-    <title>CABIN - the gathering place for Canadian storytellers</title>
-
-
     <!-- Font Awesome (icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 
 </head>
 
   <body>
     <!-- Background -->
     <background>
+
       <div style="background-image: url('./public/images/aurora-arctic.jpg')">
         
         <!-- Logo and Tagline -->
@@ -37,22 +40,54 @@
         <h2 class="tagline">the gathering place for Canadian storytellers</h2>
 
       <!-- Navigation -->
-        <nav class="topnav" id="myTopnav"></nav>>
-          <a href="#login" class="login">Log in</a>
-          <a href="#signup"class="signup">Sign up</a>
-          <a href="#subscribe"class="subscribe">Subscribe</a>
-          <a href="#" class="logo"><img
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#login" class="login"
+        onclick="window.location.href='user.html';">Log in</a>
+        <a href="#signup" class="signup"onclick="window.location.href='share.html';">Sign up</a>
+      </div>
+
+      
+      <div class="menu-nav">
+
+        <div class="right-nav">
+          <div class="login" style="cursor:pointer;" onclick="openLogin()" role="button"></div>
+            <p class="deco" aria-hidden="true"></p>
+        </div>
+
+        <div class="right-nav">
+          <div class="signup" style="cursor:pointer;" onclick="openSignup()" role="button"></div>
+        </div>
+
+        <span style="font-size:70px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+
+        <span style="font-size:70px;cursor:pointer;" onclick="openNav()">&#9906;</span>
+      </div>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+        
+          
+          <a href="index.html" class="logo"><img
             src="./images/cabin.svg"
             alt="Cabin menu logo"
             height="100"
-            width="150" /></a>
-          <a href="#search">Search</a>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+            width="150" />
+            </a>
+          
+           
           </a>
         </nav>
 
         <!-- Buttons -->
+        
         <div
           class="column1"
         >
@@ -73,13 +108,58 @@
 
     </background>
 
+    <div class="container">
+      <form class="form" id="login">
+          <h1 class="form__title">Login</h1>
+          <div class="form__message form__message--error"></div>
+          <div class="form__input-group">
+              <input type="text" class="form__input" autofocus placeholder="Username or email">
+              <div class="form__input-error-message"></div>
+          </div>
+          <div class="form__input-group">
+              <input type="password" class="form__input" autofocus placeholder="Password">
+              <div class="form__input-error-message"></div>
+          </div>
+          <button class="form__button" type="submit">Continue</button>
+          <p class="form__text">
+              <a href="#" class="form__link">Forgot your password?</a>
+          </p>
+          <p class="form__text">
+              <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+          </p>
+      </form>
+      <form class="form form--hidden" id="createAccount">
+          <h1 class="form__title">Create Account</h1>
+          <div class="form__message form__message--error"></div>
+          <div class="form__input-group">
+              <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+              <div class="form__input-error-message"></div>
+          </div>
+          <div class="form__input-group">
+              <input type="text" class="form__input" autofocus placeholder="Email Address">
+              <div class="form__input-error-message"></div>
+          </div>
+          <div class="form__input-group">
+              <input type="password" class="form__input" autofocus placeholder="Password">
+              <div class="form__input-error-message"></div>
+          </div>
+          <div class="form__input-group">
+              <input type="password" class="form__input" autofocus placeholder="Confirm password">
+              <div class="form__input-error-message"></div>
+          </div>
+          <button class="form__button" type="submit">Continue</button>
+          <p class="form__text">
+              <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+          </p>
+      </form>
+  </div>
+
+  
+
+  <script src="js/script.js"></script>
+
     <!-- Footer -->
     <footer class="footer">
-
-          <!-- Footer -->
-      <!-- <div class="campfire"><img src="public/images/campfire.svg" alt="Cabin menu logo" -->
-        <!-- height="700"
-        width="700"/> -->
       <h5 class="index-h5">&copy; 2022 Cabin</h5>
         </footer>
   </body>
