@@ -52,7 +52,7 @@ Post.init({
     },
     summary: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
             len: [1,255]
         }
