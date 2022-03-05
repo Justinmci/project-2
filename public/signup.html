@@ -18,18 +18,13 @@
     <div class="container">
         <h2>Sign Up</h2>
 
-        <form action="">
-            <div class="form-item-username">
-                <input type="text" name="firstName" id="firstName" placeholder="First Name">
-                <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+        <form class="signup-form">
+            <div class="form-item">
+                <input type="email" name="email" id="email-signup" placeholder="Email">
             </div>
 
             <div class="form-item">
-                <input type="email" name="email" id="email" placeholder="Email">
-            </div>
-
-            <div class="form-item">
-                <input type="Username" name="Username" id="Username" placeholder="Username">
+                <input type="username" name="username" id="username-signup" placeholder="Username">
             </div>
 
             <div class="form-item">
@@ -37,17 +32,11 @@
                 <span class="pwd-format">
                     8-15 AlphaNumeric Characters
                 </span>
-                <input type="password" name="password" id="password" placeholder="Enter password">
-                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm password">
-            </div>
-
-            <div class="accept-box">
-                <input type="checkbox" name="accept" id="accept">
-                <p>I accept the <a href="#">Terms & Conditions</a></p>
+                <input type="password" name="password" id="password-signup" placeholder="Enter password">
             </div>
 
             <div class="form-btns">
-                <button class="signup" type="submit" disabled>Sign Up</button>
+                <button class="signup" type="submit">Sign Up</button>
                 <div class="options">
                     Already have an account? <a href="index.html">Login here</a>
                 </div>
@@ -57,6 +46,7 @@
         <p>&copy; 2022 Cabin</p>
     </div>
 
+<script src="/js/signup.js"></script>   
 <script src="../public/js/main.js"></script>
 </body>
 

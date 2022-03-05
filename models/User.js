@@ -24,7 +24,7 @@ User.init(
     },
     bio: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: [1,255]
       }
