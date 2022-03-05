@@ -36,27 +36,27 @@
     </div>
     <div class="popup">
       <div class="close-btn">&times;</div>
-      <div class="form">
+      <form class="login-form">
         <h2>LOGIN</h2>
         <div class="form-element">
-          <label for="Username">Username</label>
-          <input type="text" id="email" placeholder="Enter username">
+          <label for="Email">Email</label>
+          <input type="email" id="email-login" placeholder="Enter email">
         </div>
         <div class="form-element">
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password">
+          <input type="password" id="password-login" placeholder="Enter password">
         </div>
         <div class="form-element">
           <input type="checkbox" id="remember-me">
           <label for="remember-me">Remember me</label>
         </div>
         <div class="form-element">
-          <button>LOGIN</button>
+          <button type="submit">LOGIN</button>
         </div>
         <div class="form-element">
           <a href="signup.html">Sign up</a>
         </div>
-      </div>
+      </form>
     </div>
     
     <!-- Background -->
@@ -140,7 +140,8 @@
 
     </background>
 
-  <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/script.js"></script>
 
     <!-- Footer -->
     <footer class="footer">
