@@ -1,7 +1,6 @@
 const path = require('path');
 const express = require('express');
 const session = require('express-session')
-const routes = require('./controllers');
 // import sequelize connection
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -25,10 +24,10 @@ app.use(session(sess));
 
 // Sets up the Express app to handle data parsing
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(routes);
+app.use(require('./controllers/'));
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {

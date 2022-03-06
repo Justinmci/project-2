@@ -5,7 +5,7 @@ const router = require('express').Router();
 
 
 router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "../public/index.html"));
 });  
 
 router.get('/login', (req, res) => {
