@@ -1,5 +1,8 @@
+id = localStorage.getItem('id');
+console.log(id)
+
 const getStory = () =>
-fetch('/api/posts/:id', {
+fetch(`/api/posts/${id}`, {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json'
@@ -26,7 +29,7 @@ function buildTable(data) {
           <div>by <a href="user.html">${data.user_id}</a></div>
         </td>
         <td class="post-col d-lg-flex justify-content-lg-between">
-          <div><span class="font-weight-bold">Posted:</span>${data.created_at}</div>
+          <div><span class="font-weight-bold">Posted:</span>${data.title}</div>
         </td>
         </tr>
         <tr>
