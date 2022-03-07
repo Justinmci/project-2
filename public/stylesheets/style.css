@@ -37,6 +37,134 @@
   );
 }
 
+/* POPUP LOGIN */
+
+.center {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center button {
+  display: block;
+  outline: none !important;
+  height: 50px;
+  width: 225px;
+  margin-top: 20vh;
+  font-family: "Zilla Slab", serif;
+  font-size: clamp(0.75rem, 4vw, 1.5rem);
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.1em;
+  color: var(--brown);
+  border: 0;
+  border-radius: 100px;
+  background-color: #ffc107;
+  padding: 12px 15px 10px 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: fixed;
+  left: 30%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.center .hover {
+  background-color: var(--blue-green-rovr);
+  color: var(--brown);
+  border: 0;
+}
+
+.popup {
+  position: fixed;
+  top: -150%;
+  left: 15%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.25);
+  width: 300px;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+    transform 20ms ease-in-out 0ms;
+}
+
+.popup.active {
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,
+    transform 20ms ease-in-out 0ms;
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background: #888;
+  color: #eee;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.popup .form h2 {
+  text-align: center;
+  color: #222;
+  margin: 10px 0px 20px;
+  font-size: 25px;
+}
+
+.popup .form .form-element {
+  margin: 15px 0px;
+}
+
+.popup .form .form-element label {
+  font-size: 14px;
+  color: #222;
+}
+
+.popup .form .form-element input [type="text"],
+.popup .form .form-element input [type="password"] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.popup .form .form-element input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.popup .form .form-element button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: #222;
+  color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.popup .form .form-element a {
+  display: block;
+  text-align: right;
+  font-size: 15px;
+  color: #1a79ca;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .login {
   position: absolute;
   left: 85%;
@@ -79,21 +207,11 @@
   color: var(--brown);
 }
 
-.search-icon {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-/* Arcan */
+/* Menu */
 .homebutton {
   position: absolute;
   top: 0;
   left: 0;
-}
-.header {
-  background-color: black;
 }
 
 .menu-nav {
@@ -105,12 +223,14 @@
 }
 
 .sidenav {
-  height: 100%;
-  width: 0;
+  flex-wrap: wrap;
+  height: 100vh;
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
+  width: 400px;
+  margin: auto;
+  padding: 0;
   background-color: var(--lime);
   font-family: "Zilla Slab", serif;
   font-size: clamp(0.75rem, 4vw, 1.5rem);
@@ -124,16 +244,17 @@
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
   color: var(--brown);
   display: block;
   transition: 600ms;
   transition-timing-function: ease-in-out;
+  overflow: hidden;
 }
 
 .sidenav a:hover {
-  color: var(--cherry-red);
+  color: var(--bright-red);
   text-decoration: none;
+  overflow: hidden;
 }
 
 .sidenav .closebtn {
@@ -141,7 +262,18 @@
   top: 0;
   right: 25px;
   font-size: 45px;
-  margin-left: 50px;
+  margin-left: 0px;
+}
+
+.item {
+  margin-left: 40px;
+}
+
+.row {
+  padding-left: 55px;
+  padding-top: 8px;
+  columns: 3;
+  column-gap: 20px;
 }
 
 @media screen and (max-height: 450px) {
@@ -157,60 +289,10 @@
   flex-wrap: wrap;
   column-count: 1;
   column-gap: 0;
-  height: 100%;
-  margin: auto;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   z-index: 1;
-}
-
-/* Add a black background color to the top navigation */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--bright-red);
-  overflow: hidden;
-  height: 28vh;
-  padding: 0px;
-  margin: 0px;
-  position: absolute;
-  /* margin-top: 30vh; */
-  left: 50%;
-  width: 100%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-/* Style the links inside the navigation bar */
-nav a {
-  display: absolute;
-  /* flex: 0 1 30vw; */
-  list-style: none;
-  color: #7c2f2f;
-  text-align: center;
-  /* padding: 0px;
-  margin: 0px; */
-  text-decoration: none;
-  font-size: clamp(1rem, 6vw, 2.5rem);
-  z-index: 1;
-}
-
-/* Change the color of links on hover */
-nav a:hover {
-  background-color: rgb(105, 5, 5);
-  color: black;
-}
-
-/* Add an active class to highlight the current page */
-nav a.active {
-  background-color: #49061a;
-  color: rgb(27, 22, 22);
-  text-decoration: none;
-}
-
-nav i {
-  color: rgb(22, 18, 18);
-  size: 50vw;
 }
 
 /* Logo */
@@ -222,19 +304,18 @@ nav i {
   margin: 0;
   margin-top: 6.5vh;
   left: 50%;
-  /* width: 75%; */
   -ms-transform: translate(-90%, -90%);
   transform: translate(-50%, -50%);
   z-index: 4;
 }
 
-/* .logo:hover {
+.logo:hover {
   src: url(public/images/cabin-rollover.svg) no-repeat;
   -webkit-transition: all 0.7s ease-in-out;
   -moz-transition: all 0.7s ease-in-out;
   -o-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
-} */
+}
 
 /* Footer Image
 .campfire {
@@ -245,7 +326,6 @@ nav i {
   /* margin: 0; */
 /*transform: scale(0.6) z-index 4;
 /* } 
-
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
@@ -373,6 +453,29 @@ nav i {
   background-color: var(--blue-green-rovr);
   color: var(--brown);
   border: 0;
+}
+
+.login-button {
+  outline: none !important;
+  height: 50px;
+  width: 225px;
+  margin-top: 40vh;
+  font-family: "Zilla Slab", serif;
+  font-size: clamp(0.75rem, 4vw, 1.5rem);
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.1em;
+  color: var(--brown);
+  border: 0;
+  border-radius: 100px;
+  background-color: #ffc107;
+  padding: 12px 15px 10px 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: absolute;
+  left: 30%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /* Index Page Crypto Button */

@@ -42,14 +42,55 @@
       <!-- Navigation -->
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#login" class="login"
-        onclick="window.location.href='user.html';">Log in</a>
-        <a href="#signup" class="signup"onclick="window.location.href='share.html';">Sign up</a>
-      </div>
+        <hr>
+        <ul>
+          <a href="#" class="active">
+              <span class="item">Home</span>
+          </a>
+      </ul>
+      <hr>
+      <ul>
+          <a href="#">
+              <span class="item">Top Ten Best Rated Stories</span>
+          </a>
+      </ul>
+      <hr>
+      <ul>
+          <a href="#">
+              <span class="item">Learn How to Write a Story</span>
+          </a>
+      </ul>
+      <hr>
+      <ul>
+          <a href="#">
+              <span class="item">Fiction</span>
+          </a>
+      </ul>
+      <hr>
+      <ul>
+          <a href="#">
+              <span class="item">Non-Fiction</span>
+          </a>
+      </ul>
+      <hr>
+      <ul>
+          <a href="#"><span class="item">Subscribe</span>
+          </a>
+      </ul>
+      <hr>
+      <ul>
+        <div class="row">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+      </ul>
+     </ul>
+    </div>
 
-      
+
+      <!-- Log in / Sign Up -->
       <div class="menu-nav">
-
         <div class="right-nav">
           <div class="login" style="cursor:pointer;" onclick="openLogin()" role="button">Log In</div>
             <p class="deco" aria-hidden="true"> // </p>
@@ -59,9 +100,8 @@
           <div class="signup" style="cursor:pointer;" onclick="openSignup()" role="button">Sign Up</div>
         </div>
 
-        <span style="font-size:70px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+        <span style="font-size:53px;cursor:pointer;" onclick="openNav()">&#9776;</span>
 
-        <span style="font-size:70px;cursor:pointer;" onclick="openNav()">&#9906;</span>
       </div>
       
       <script>
@@ -73,8 +113,38 @@
         document.getElementById("mySidenav").style.width = "0";
       }
       </script>
+
+      <!-- Pop up Login -->
+    <div class="center">
+      <button id="show-login">LOGIN/SIGN UP</button>
+    </div>
+    <div class="popup">
+      <div class="close-btn">&times;</div>
+      <form class="login-form">
+        <h2>LOGIN</h2>
+        <div class="form-element">
+          <label for="Email">Email</label>
+          <input type="email" id="email-login" placeholder="Enter email">
+        </div>
+        <div class="form-element">
+          <label for="password">Password</label>
+          <input type="password" id="password-login" placeholder="Enter password">
+        </div>
+        <div class="form-element">
+          <input type="checkbox" id="remember-me">
+          <label for="remember-me">Remember me</label>
+        </div>
+        <div class="form-element">
+          <button type="submit">LOGIN</button>
+        </div>
+        <div class="form-element">
+          <a href="signup.html">Sign up</a>
+        </div>
+      </form>
+    </div>
+
         
-          
+          <!-- Logo -->
           <a href="index.html" class="logo"><img
             src="./images/cabin.svg"
             alt="Cabin menu logo"
@@ -106,6 +176,10 @@
         </div>
 
     </background>
+
+    <!-- Javascript -->
+    <script src="js/login.js"></script>
+    <script src="js/script.js"></script>
 
     <!-- Footer -->
     <footer class="footer">
