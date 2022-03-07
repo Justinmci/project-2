@@ -531,15 +531,28 @@ footer {
 }
 
 /* Mobile Devices 420px and Under */
-@media (max-width: 912px) {
+@media (max-width: 1050px) {
   .column {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
   }
 
+  .explore-button {
+    width: 220px;
+    font-size: 21px;
+    align-content: center;
+    left: 35%;
+  }
+
+  .share-button {
+    width: 220px;
+    font-size: 21px;
+    align-content: center;
+    margin-left: 25px;
+  }
   /* Mobile Devices 540px and Under */
-  @media (max-width: 540px) {
+  @media (max-width: 640px) {
     .intro {
       display: none;
     }
@@ -549,7 +562,7 @@ footer {
     }
 
     .tagline {
-      font-size: 30px;
+      font-size: 38px;
       padding-top: 10px;
     }
 
@@ -557,12 +570,25 @@ footer {
       width: 120px;
       font-size: 21px;
       align-content: center;
+      left: 35%;
     }
 
     .share-button {
       width: 120px;
       font-size: 21px;
       align-content: center;
+      margin-left: 25px;
+    }
+
+    .center button {
+      margin-top: 12px;
+      padding-top: 8px;
+      width: 111px;
+      height: 50px;
+      font-size: 21px;
+      align-content: center;
+      font-size: 14pt;
+      line-height: 0.95em;
     }
 
     .footer {
