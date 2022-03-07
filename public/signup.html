@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href=".//stylesheets/signup.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Sign Up</h2>
+
+      <form class="signup-form">
+        <div class="form-item">
+          <input
+            type="email"
+            name="email"
+            id="email-signup"
+            placeholder="Email"
+          />
+        </div>
+
+        <div class="form-item">
+          <input
+            type="username"
+            name="username"
+            id="username-signup"
+            placeholder="Username"
+          />
+        </div>
+
+        <div class="form-item">
+          <!-- add a password format display -->
+          <span class="pwd-format"> 8-15 AlphaNumeric Characters </span>
+          <input
+            type="password"
+            name="password"
+            id="password-signup"
+            placeholder="Enter password"
+          />
+        </div>
+
+        <div class="form-btns">
+          <button class="signup" type="submit">Sign Up</button>
+          <div class="options">
+            Already have an account? <a href="index.html">Login here</a>
+          </div>
+        </div>
+      </form>
+      <p>&copy; 2022 Cabin</p>
+    </div>
+
+    <script src="/js/signup.js"></script>
+    <script src="../public/js/main.js"></script>
+  </body>
+</html>

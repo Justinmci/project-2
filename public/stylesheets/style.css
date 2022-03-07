@@ -68,7 +68,7 @@
   transform: translate(-50%, -50%);
 }
 .center button:hover {
-  background-color: var(--lime);
+  background-color: #face4b;
   color: var(--brown);
   border: 0;
 }
@@ -312,6 +312,16 @@
   -moz-transition: all 0.7s ease-in-out;
   -o-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
+}
+
+.images {
+  display: flex;
+  z-index: 8;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
 }
 
 /* Footer Image
