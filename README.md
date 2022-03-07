@@ -13,7 +13,7 @@ A short story sharing website for Canadians where you can read the stories and p
 
 ## Visit
 
-URL GOES HERE
+https://project-two-cabin.herokuapp.com/
 
 ## Usage
 
@@ -22,7 +22,7 @@ Write and store your own short stories by making an account with us! Read the la
 ## Contributing
 
 * [Arcan]()
-* [Conner](https://github.com/cnb10100)
+* [Conor](https://github.com/cnb10100)
 * [Constance](https://github.com/SnugglesMcGee)
 * [Ian](https://github.com/wiffin)
 
