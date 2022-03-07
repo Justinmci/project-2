@@ -32,9 +32,6 @@ function buildTable(data) {
         <div class="likes">likes count</div>
         </td>
         <td>
-        <div class="comments">comments count</div>
-        </td>
-        <td>
         <h4 class="h6 mb-0 font-weight-bold"><a href="post.html"></a></h4>
         <span>by </span><span class="story-author"><a href="#0">${data[i].user_id}</a></span>
         <div>${data[i].created_at}</div>
