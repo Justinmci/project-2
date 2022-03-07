@@ -1,3 +1,42 @@
+/* Remove Browser Default Styling */
+/* the * acts as a select all*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
+
+/* CSS Variables */
+:root {
+  --white: #e9f0fd;
+  --cream: #f0dfc5;
+  --warm-grey: #867365;
+  --blue-green: #437d92;
+  --blue-green-rovr: #069da2;
+  --bright-red: #ba0001;
+  --cherry-red: #7d0001;
+  --subtle-red: #a4262c;
+  --orange-red: #b33f32;
+  --deep-orange-red: #862f26;
+  --light-blue-green: #4f869a;
+  --bright-blue-green: #038387;
+  --mid-green: #1e9b53;
+  --purple: #26232c;
+  --bright-green: #09212d;
+  --blue: #0078d4;
+  --blue-rovr: #1f9bf9;
+  --brown: #201014;
+  --lime: #deeeae;
+  --sage: #909b7e;
+  --gradient: linear-gradient(
+    90deg,
+    rgba(255, 105, 0) 100%,
+    rgb(207, 46, 46) 100%
+  );
+}
+
 ::placeholder {
   color: black;
   opacity: 1;
@@ -14,7 +53,7 @@ body {
 }
 
 .container {
-  background: #ffc107;
+  background: var(--warm);
   display: flex;
   flex-direction: column;
   align-items: center;
