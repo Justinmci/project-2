@@ -40,38 +40,35 @@
 /* POPUP LOGIN */
 
 .center {
-  display: block;
+  display: flex;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 98%;
+  top: 7.75vh;
   transform: translate(-50%, -50%);
 }
 
 .center button {
   display: block;
   outline: none !important;
-  height: 50px;
+  height: 40px;
   width: 225px;
-  margin-top: 20vh;
   font-family: "Zilla Slab", serif;
-  font-size: clamp(0.75rem, 4vw, 1.5rem);
+  font-size: clamp(0.5rem, 4vw, 1.25rem);
   font-weight: bold;
   text-align: center;
-  line-height: 1.1em;
+  line-height: 0.5em;
   color: var(--brown);
   border: 0;
-  border-radius: 100px;
+  border-radius: 5px;
   background-color: #ffc107;
   padding: 12px 15px 10px 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25); */
   z-index: 2;
-  position: fixed;
-  left: 30%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.center .hover {
-  background-color: var(--blue-green-rovr);
+.center button:hover {
+  background-color: var(--lime);
   color: var(--brown);
   border: 0;
 }
