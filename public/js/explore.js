@@ -36,7 +36,10 @@ function buildTable(data) {
         <span>by </span><span class="story-author"><a href="#0">${data[i].user_id}</a></span>
         <div>${data[i].created_at}</div>
         </td>
-        </tr>`
+        </tr>
+        <script>
+        localStorage.setItem('id', data[i].id);
+        </script>`
     tableBody.innerHTML += row
     }
 }
